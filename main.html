@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Incluir os estilos do Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <style>
+   body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+#menu-container {
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.botao {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #2ecc71;
+}
+
+h1 {
+  text-align: center;
+  color: #3498db;
+}
+
+p em {
+  font-style: italic;
+  color: #ccc;
+}
+
+/* Estilos para o swiper slide */
+.swiper-container {
+  text-align: center;
+}
+
+.imagem-slide {
+  width: 600px;
+  height: 380px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background-color: #1e1e1e;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  background-color: #3498db;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2ecc71;
+}
+
+    </style>
+    <title>Artefatos Antigos</title>
+  </head>
+
+  <body>
+    <div id="menu-container">
+      <button class="botao" onclick="window.location.href='./main.html'">
+        HOME 🏠
+      </button>
+      <button class="botao" onclick="window.location.href='./sobrenos.html'">
+        SOBRE NÓS 🧐
+      </button>
+      <button class="botao" onclick="window.location.href='/produtos.html'">
+        PRODUTOS 🗿
+      </button>
+      <button class="botao" onclick="window.location.href='/parceiros.html'">
+        PARCEIROS 👨🏻‍🤝‍👨🏻
+      </button>
+    </div>
+
+    <h1>ARTEFATOS ANTIGOS DE FONTES DUVIDOSAS</h1>
+
+    <p>
+      <em>
+        Nós temos os melhores tapetes, livros, artigos no geral encontrados
+        legalmente em países de terceiro mundo confia.
+      </em>
+    </p>
+
+    <!-- Adicionar o swiper slide -->
+    <div class="swiper-container" style="text-align: center">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            class="imagem-slide"
+            height="380"
+            width="600"
+            src="https://images.ctfassets.net/cnu0m8re1exe/hfF30TQiZHCmCRnzTXXNo/969e0ea47b5958ea6db0147d89baba01/23785641449_afdaafc4ba_k.jpg"
+            alt="Slide 1"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="imagem-slide"
+            height="380"
+            width="600"
+            src="https://cdn.sci.news/images/enlarge3/image_4107_1e-Hala-Sultan-Tekke.jpg"
+            alt="Slide 2"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="imagem-slide"
+            height="380"
+            width="600"
+            src="https://www.archaeology.wiki/wp-content/uploads/2019/10/Grevena_1.jpg"
+            alt="Slide 3"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            class="imagem-slide"
+            height="380"
+            width="600"
+            src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/01-paracas-ceramics-peru.jpg?w=1600&h=900"
+            alt="Slide 4"
+          />
+        </div>
+        <!-- Adicione mais slides conforme necessário -->
+      </div>
+
+      <!-- Navegação e paginação -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Incluir a biblioteca Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+      // Inicializar o swiper slide
+      var swiper = new Swiper(".swiper-container", {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>
